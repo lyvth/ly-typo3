@@ -1,0 +1,19 @@
+{
+  "name": "slavlee/t3campus-kickstart",
+  "type": "typo3-cms-extension",
+  "description": "Base sceletton for TYPO3 extensions",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "typo3/cms-core": "^12.4 || ^13.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Slavlee\\T3campusKickstart\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "t3campus_kickstart"
+    }
+  }
+}

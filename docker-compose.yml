@@ -1,0 +1,49 @@
+version: '3.7'
+services:
+  web:
+    image: nginx:stable
+    container_name: typo3-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./build/web/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    working_dir: /var/www/html
+    depends_on:
+      - php
+    networks:
+      - typo3net
+
+  php:
+    build:
+      context: ./build/php
+      dockerfile: Dockerfile
+    container_name: typo3-php
+    volumes:
+      - ./:/var/www/html
+      - ./build/php/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./build/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    working_dir: /var/www/html
+    depends_on:
+      - db
+    networks:
+      - typo3net
+
+  db:
+    image: mariadb:latest
+    container_name: typo3-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=supersecret
+      - MYSQL_DATABASE=typo3db
+      - MYSQL_USER=typo3user
+      - MYSQL_PASSWORD=supersecret
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - typo3net
+
+networks:
+  typo3net:
+
+volumes:
+  db_data:
