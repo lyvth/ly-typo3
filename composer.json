@@ -14,6 +14,8 @@
 		"sort-packages": true
 	},
 	"require": {
+		"bk2k/bootstrap-package": "^15.0",
+		"lyvth/tea": "^1.0",
 		"typo3/cms-backend": "^12.4",
 		"typo3/cms-belog": "^12.4",
 		"typo3/cms-beuser": "^12.4",
@@ -43,7 +45,10 @@
 	"repositories": [
 		{
 			"type": "path",
-			"url": "./packages/*"
+			"url": "repository/local/*"
 		}
-	]
+	],
+	"require-dev": {
+		"b13/make": "^0.1.8"
+	}
 }
