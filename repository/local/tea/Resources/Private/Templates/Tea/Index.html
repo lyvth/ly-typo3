@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default"/>
 
@@ -27,6 +26,9 @@
             <th>
                 <f:translate key="plugin.tea.property.title"/>
             </th>
+            <th>
+                <f:translate key="plugin.tea.property.description"/>
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -40,9 +42,27 @@
                         {tea.title}
                     </f:link.action>
                 </td>
+                <td>
+                    {tea.description}
+                </td>
             </tr>
         </f:for>
         </tbody>
     </table>
+
+
+    <f:variable name="idPrefix" value="tea-editor"/>
+    <f:form action="create" name="tea" object="{newTea}">
+        <h2>Add New Tea</h2>
+        <div class="form-group">
+            <label for="{idPrefix}-title">Title</label>
+            <f:form.textfield property="title" id="{idPrefix}-title" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="{idPrefix}-description">Description</label>
+            <f:form.textarea property="description" id="{idPrefix}-description" rows="5" class="form-control"/>
+        </div>
+        <f:form.submit value="Add Tea" class="btn btn-primary"/>
+    </f:form>
 </f:section>
 </html>

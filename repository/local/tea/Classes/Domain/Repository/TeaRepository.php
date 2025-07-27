@@ -12,5 +12,5 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  * @extends Repository<Tea>
  */
 class TeaRepository extends Repository {
-    protected $defaultOrderings = ['title' => QueryInterface::ORDER_ASCENDING];
+//    protected $defaultOrderings = ['title' => QueryInterface::ORDER_ASCENDING];
 }

@@ -15,11 +15,11 @@ ExtensionUtility::configurePlugin(
     'TeaIndex',
     // all actions
     [
-        TeaController::class => 'index',
+        TeaController::class => 'index, create',
     ],
     // non-cacheable actions
     [
-        TeaController::class => '',
+        TeaController::class => 'index, create',
     ]
 );
 
