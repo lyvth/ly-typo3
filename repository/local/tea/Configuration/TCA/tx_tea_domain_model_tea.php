@@ -21,14 +21,7 @@ return [
         'translationSource' => 'l10n_source',
     ],
     'types' => [
-        '1' => [
-            'showitem' =>
-                '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
-                    title, description, image, owner,
-                 --div--;LLL:EXT:tea/Resources/Private/Language/locallang_db.xlf:tx_tea_domain_model_tea.tabs.access,
-                    --palette--;;hidden,
-                    --palette--;;access,',
-        ],
+        '1' => ['showitem' => 'title, description, image'],
     ],
     'columns' => [
         'title' => [
@@ -54,13 +47,6 @@ return [
             'config' => [
                 'type' => 'file',
                 'maxitems' => 1,
-                'appearance' => [
-                    'collapseAll' => true,
-                    'useSortable' => false,
-                    'enabledControls' => [
-                        'hide' => false,
-                    ],
-                ],
                 'allowed' => 'common-image-types',
             ]
         ],

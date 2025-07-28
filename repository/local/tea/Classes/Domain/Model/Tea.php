@@ -8,6 +8,7 @@ use TYPO3\CMS\Extbase\Annotation as Extbase;
 use TYPO3\CMS\Extbase\Domain\Model\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
+use TYPO3\CMS\Extbase\Annotation\FileUpload;
 
 /**
  * This class represents a tea (flavor), e.g., "Earl Grey".
@@ -25,12 +26,9 @@ class Tea extends AbstractEntity
      */
     protected string $description = '';
 
-    /**
-     * @var FileReference|null
-     * @phpstan-var FileReference|LazyLoadingProxy|null
-     * @Extbase\ORM\Lazy
-     */
     protected $image;
+
+    public function __construct() {}
 
     public function getTitle(): string
     {

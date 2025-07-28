@@ -29,6 +29,9 @@
             <th>
                 <f:translate key="plugin.tea.property.description"/>
             </th>
+            <th>
+                <f:translate key="plugin.tea.property.image"/>
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -44,6 +47,9 @@
                 </td>
                 <td>
                     {tea.description}
+                </td>
+                <td>
+                    <f:image image="{tea.image.originalFile}" />
                 </td>
             </tr>
         </f:for>
@@ -61,6 +67,10 @@
         <div class="form-group">
             <label for="{idPrefix}-description">Description</label>
             <f:form.textarea property="description" id="{idPrefix}-description" rows="5" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="{idPrefix}-image">Image</label>
+            <input type="file" name="upload" id="{idPrefix}-image"/>
         </div>
         <f:form.submit value="Add Tea" class="btn btn-primary"/>
     </f:form>

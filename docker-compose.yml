@@ -38,6 +38,8 @@ services:
       - MYSQL_DATABASE=typo3db
       - MYSQL_USER=typo3user
       - MYSQL_PASSWORD=supersecret
+    ports:
+      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
     networks:
