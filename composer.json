@@ -15,6 +15,7 @@
 	},
 	"require": {
 		"bk2k/bootstrap-package": "^15.0",
+		"lyvth/coffee": "^1.0",
 		"lyvth/tea": "^1.0",
 		"typo3/cms-backend": "^12.4",
 		"typo3/cms-belog": "^12.4",

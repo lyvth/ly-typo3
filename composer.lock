@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9405411c7c246fde77699a8551fb130",
+    "content-hash": "36e4d772a65d16e55ae9ed30740c7575",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1318,6 +1318,45 @@
                 "source": "https://github.com/lolli42/FineDiff/tree/1.0.4"
             },
             "time": "2024-07-09T14:52:10+00:00"
+        },
+        {
+            "name": "lyvth/coffee",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "repository/local/coffee",
+                "reference": "7000474a20c1ced65e2cdf5b14c5b71eaf38d045"
+            },
+            "require": {
+                "php": "8.1.1",
+                "psr/http-message": "^1.0.1",
+                "typo3/cms-core": "^12.4",
+                "typo3/cms-extbase": "^12.4",
+                "typo3/cms-fluid": "^12.4",
+                "typo3/cms-frontend": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "coffee"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LYVTH\\Coffee\\": "Classes/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Ly Vu",
+                    "email": "huonglyvuthi@gmail.com",
+                    "role": "maintainer"
+                }
+            ],
+            "description": "TYPO3 example extension for coffee",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "lyvth/tea",
